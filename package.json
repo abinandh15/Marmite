@@ -23,10 +23,16 @@
   },
   "dependencies": {
     "@dcl/builder-hud": "^1.0.2",
-    "@dcl/ecs-scene-utils": "^1.7.5"
+    "@dcl/ecs-scene-utils": "^1.7.5",
+    "@dcl/npc-scene-utils": "^1.5.1"
   },
   "bundledDependencies": [
     "@dcl/ecs-scene-utils",
     "@dcl/builder-hud"
+  ],
+  "bundleDependencies": [
+    "@dcl/builder-hud",
+    "@dcl/ecs-scene-utils",
+    "@dcl/npc-scene-utils"
   ]
 }

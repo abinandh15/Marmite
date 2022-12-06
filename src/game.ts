@@ -1,6 +1,8 @@
 import { hud } from "@dcl/builder-hud";
 import { Model } from "./model";
 import resources from "./resources";
+import { NPC, NPCDelay } from '@dcl/npc-scene-utils';
+import { Police1Dialog, Reporter1Dialog, } from './modules/dialogData'
 
 // ----MODELS----
 
@@ -54,13 +56,107 @@ const person07 = new Model(resources.models.robots.person7, { position: new Vect
 const person08 = new Model(resources.models.robots.person8, { position: new Vector3(14, 0, 27.7), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'person8')
 const person09 = new Model(resources.models.robots.person7, { position: new Vector3(14, 0, 26.7), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'person9')
 const person10 = new Model(resources.models.robots.person8, { position: new Vector3(11.35, 0.1, 26.62), rotation: Quaternion.Euler(0, 90, 0), scale: new Vector3(1, 1, 1) }, 'person10')
-const police = new Model(resources.models.robots.police, { position: new Vector3(13.73, 0.1, 4.62), rotation: Quaternion.Euler(0, 135, 0), scale: new Vector3(1, 1, 1) }, 'police')
-const reporter = new Model(resources.models.robots.reporter, { position: new Vector3(20.81, -1.1, 20.3), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'reporter')
+// const police = new Model(resources.models.robots.police, { position: new Vector3(13.73, 0.1, 4.62), rotation: Quaternion.Euler(0, 135, 0), scale: new Vector3(1, 1, 1) }, 'police')
+// const reporter = new Model(resources.models.robots.reporter, { position: new Vector3(20.81, -1.1, 20.3), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'reporter')
 
-//adding christmas tree
-
+//adding christmas trees
 const christmastree = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,18.5), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasS')
 const christmastree2 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,25), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasQ')
 const christmastree3 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,33.5), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasW')
 const christmastree4 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,10), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasE')
-hud.attachToEntity(christmastree4)
+
+
+// // adding police NPC
+export const police1 = new NPC(
+    {
+      position: new Vector3(15.18, 0 ,13.87),
+      scale: new Vector3(1, 1, 1),
+      rotation: Quaternion.Euler(0, 0, 0)
+    },
+    resources.models.robots.police,
+    () => {
+      // animations
+      police1.playAnimation('wave', true, 2)
+  
+      // const dummyent = new Entity()
+      // dummyent.addComponent(
+      //   new NPCDelay(2, () => {
+      //     neha.playAnimation('fistpump')
+      //   })
+      // )
+      // engine.addEntity(dummyent)
+  
+      // sound
+    //   police1.addComponentOrReplace(new AudioSource(resources.sounds.neha))
+    //   police1.getComponent(AudioSource).playOnce()
+  
+      // dialog UI
+      police1.talk(Police1Dialog)
+    },
+    {
+      faceUser: true,
+      portrait: {
+        path: 'images/portraits/alice.png',
+        height: 256,
+        width: 256,
+        section: {
+          sourceHeight: 512,
+          sourceWidth: 512
+        }
+      },
+      onWalkAway: () => {
+       police1.playAnimation('wave', true, 2)
+      }
+    }
+  )
+
+//   hud.attachToEntity(police1)
+
+
+
+
+//adding reporter NPC
+  export const reporter1 = new NPC(
+    {
+      position: new Vector3(18,-9,8),
+      scale: new Vector3(1, 1, 1),
+      rotation: Quaternion.Euler(0, 0, 0)
+    },
+    resources.models.robots.reporter,
+    () => {
+      // animations
+      reporter1.playAnimation('wave', true, 2)
+  
+      // const dummyent = new Entity()
+      // dummyent.addComponent(
+      //   new NPCDelay(2, () => {
+      //     neha.playAnimation('fistpump')
+      //   })
+      // )
+      // engine.addEntity(dummyent)
+  
+      // sound
+    //   police1.addComponentOrReplace(new AudioSource(resources.sounds.neha))
+    //   police1.getComponent(AudioSource).playOnce()
+  
+      // dialog UI
+      reporter1.talk(Reporter1Dialog)
+    },
+    {
+      faceUser: true,
+      portrait: {
+        path: 'images/portraits/alice.png',
+        height: 256,
+        width: 256,
+        section: {
+          sourceHeight: 512,
+          sourceWidth: 512
+        }
+      },
+      onWalkAway: () => {
+       reporter1.playAnimation('wave', true, 2)
+      }
+    }
+  )
+
+  hud.attachToEntity(reporter1)

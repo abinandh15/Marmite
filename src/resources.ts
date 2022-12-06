@@ -22,8 +22,8 @@ export default {
         },
         robots:{
             person1: new GLTFShape('models/robots/NPC1.glb'),
-            police: new GLTFShape('models/robots/police.glb'),            
-            reporter: new GLTFShape('models/robots/reporter.glb'),
+            police: 'models/robots/police.glb',            
+            reporter: 'models/robots/reporter.glb',
             person2: new GLTFShape('models/robots/NPC2.glb'),
             person3: new GLTFShape('models/robots/NPC3.glb'),
             // person4: new GLTFShape('models/robots/person04.glb'),
