@@ -58,7 +58,6 @@ const person09 = new Model(resources.models.robots.person7, { position: new Vect
 const person10 = new Model(resources.models.robots.person8, { position: new Vector3(11.35, 0.1, 26.62), rotation: Quaternion.Euler(0, 90, 0), scale: new Vector3(1, 1, 1) }, 'person10')
 // const police = new Model(resources.models.robots.police, { position: new Vector3(13.73, 0.1, 4.62), rotation: Quaternion.Euler(0, 135, 0), scale: new Vector3(1, 1, 1) }, 'police')
 // const reporter = new Model(resources.models.robots.reporter, { position: new Vector3(20.81, -1.1, 20.3), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'reporter')
-
 //adding christmas trees
 const christmastree = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,18.5), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasS')
 const christmastree2 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,25), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasQ')
@@ -110,7 +109,7 @@ export const police1 = new NPC(
     }
   )
 
-//   hud.attachToEntity(police1)
+
 
 
 
@@ -118,7 +117,7 @@ export const police1 = new NPC(
 //adding reporter NPC
   export const reporter1 = new NPC(
     {
-      position: new Vector3(18,-9,8),
+      position: new Vector3(18,0,8),
       scale: new Vector3(1, 1, 1),
       rotation: Quaternion.Euler(0, 0, 0)
     },
@@ -159,4 +158,5 @@ export const police1 = new NPC(
     }
   )
 
-  hud.attachToEntity(reporter1)
+
+void hud.attachToEntity(reporter1)
