@@ -34,9 +34,9 @@ screen.addComponent(
 )
 engine.addEntity(screen)
 
-hud.attachToEntity(screen)
+// hud.attachToEntity(screen)
 export function playVideo(){
   engine.addEntity(screen)
-  hud.attachToEntity(screen)
+  // hud.attachToEntity(screen)
   myVideoTexture.play()
 }

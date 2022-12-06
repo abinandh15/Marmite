@@ -17,6 +17,7 @@ export default {
             flag: new GLTFShape('models/flag.glb'),
             banner: new GLTFShape('models/banner.glb'),
             gateBuilding: new GLTFShape('models/gate_building.glb'),
+            christmastree:new GLTFShape('models/ChristmasTree .glb'),
             // people: new GLTFShape('models/people.glb'),
         },
         robots:{
