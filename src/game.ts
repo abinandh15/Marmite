@@ -68,28 +68,15 @@ const christmastree4 = new Model(resources.models.standard.christmastree, { posi
 // // adding police NPC
 export const police1 = new NPC(
     {
-      position: new Vector3(15.18, 0 ,13.87),
+      position: new Vector3(13, 0 ,10),
       scale: new Vector3(1, 1, 1),
       rotation: Quaternion.Euler(0, 0, 0)
     },
     resources.models.robots.police,
     () => {
       // animations
-      police1.playAnimation('wave', true, 2)
+      // police1.playAnimation('wave', true, 2)
   
-      // const dummyent = new Entity()
-      // dummyent.addComponent(
-      //   new NPCDelay(2, () => {
-      //     neha.playAnimation('fistpump')
-      //   })
-      // )
-      // engine.addEntity(dummyent)
-  
-      // sound
-    //   police1.addComponentOrReplace(new AudioSource(resources.sounds.neha))
-    //   police1.getComponent(AudioSource).playOnce()
-  
-      // dialog UI
       police1.talk(Police1Dialog)
     },
     {
@@ -102,10 +89,11 @@ export const police1 = new NPC(
           sourceHeight: 512,
           sourceWidth: 512
         }
-      },
-      onWalkAway: () => {
-       police1.playAnimation('wave', true, 2)
       }
+      // ,
+      // onWalkAway: () => {
+      //  police1.playAnimation('wave', true, 2)
+      // }
     }
   )
 
@@ -117,27 +105,12 @@ export const police1 = new NPC(
 //adding reporter NPC
   export const reporter1 = new NPC(
     {
-      position: new Vector3(18,0,8),
+      position: new Vector3(18,-1,18),
       scale: new Vector3(1, 1, 1),
       rotation: Quaternion.Euler(0, 0, 0)
     },
     resources.models.robots.reporter,
     () => {
-      // animations
-      reporter1.playAnimation('wave', true, 2)
-  
-      // const dummyent = new Entity()
-      // dummyent.addComponent(
-      //   new NPCDelay(2, () => {
-      //     neha.playAnimation('fistpump')
-      //   })
-      // )
-      // engine.addEntity(dummyent)
-  
-      // sound
-    //   police1.addComponentOrReplace(new AudioSource(resources.sounds.neha))
-    //   police1.getComponent(AudioSource).playOnce()
-  
       // dialog UI
       reporter1.talk(Reporter1Dialog)
     },
@@ -151,10 +124,11 @@ export const police1 = new NPC(
           sourceHeight: 512,
           sourceWidth: 512
         }
-      },
-      onWalkAway: () => {
-       reporter1.playAnimation('wave', true, 2)
       }
+      // ,
+      // onWalkAway: () => {
+      //  reporter1.playAnimation('wave', true, 2)
+      // }
     }
   )
 
