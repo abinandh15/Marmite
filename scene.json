@@ -1,14 +1,14 @@
 {
   "display": {
-    "title": "DCL Scene",
+    "title": "Marmite - Love or Hate",
     "description": "My new Decentraland project",
     "navmapThumbnail": "images/scene-thumbnail.png",
     "favicon": "favicon_asset"
   },
   "owner": "",
   "contact": {
-    "name": "author-name",
-    "email": ""
+    "name": "Filmrare",
+    "email": "rk@filmrare.com"
   },
   "main": "bin/game.js",
   "tags": [],

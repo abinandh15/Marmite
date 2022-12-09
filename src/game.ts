@@ -16,9 +16,9 @@ const mainGate = new Model(resources.models.standard.mainGate, { position: new V
 
 
 // TELEPHONE BOOTH
-const telephoneBooth1 = new Model(resources.models.standard.telephoneBoothRed, { position: new Vector3(13.5, 0, 29.7), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'telephoneRed1')
+const telephoneBooth1 = new Model(resources.models.standard.telephoneBoothBlack, { position: new Vector3(13.5, 0, 29.7), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'telephoneRed1')
 const telephoneBooth2 = new Model(resources.models.standard.telephoneBoothYellow, { position: new Vector3(15.2, 0, 29.7), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'telephoneYellow2')
-const telephoneBooth3 = new Model(resources.models.standard.telephoneBoothRed, { position: new Vector3(16.9, 0, 29.7), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'telephoneRed2')
+const telephoneBooth3 = new Model(resources.models.standard.telephoneBoothBlack, { position: new Vector3(16.9, 0, 29.7), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'telephoneRed2')
 const telephoneBooth4 = new Model(resources.models.standard.telephoneBoothYellow, { position: new Vector3(18.6, 0, 29.7), rotation: Quaternion.Euler(0, 270, 0), scale: new Vector3(1, 1, 1) }, 'telephoneYellow2')
 
 
@@ -63,6 +63,10 @@ const christmastree = new Model(resources.models.standard.christmastree, { posit
 const christmastree2 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,25), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasQ')
 const christmastree3 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,33.5), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasW')
 const christmastree4 = new Model(resources.models.standard.christmastree, { position: new Vector3(24,0,10), rotation: Quaternion.Euler(0, 0, 0), scale: new Vector3(1, 1, 1) }, 'ChristmasE')
+
+//Crowd
+const loveCrowd = new Model(resources.models.standard.lovePeople, { position: new Vector3(20, 0.2, 12.5), rotation: Quaternion.Euler(0, 90, 0), scale: new Vector3(1, 1, 1) }, 'lovePeople')
+const hateCrowd = new Model(resources.models.standard.hatePeople, { position: new Vector3(15, 0.2, 12.5), rotation: Quaternion.Euler(0, 90, 0), scale: new Vector3(1, 1, 1) }, 'hatePeople')
 
 
 // // adding police NPC

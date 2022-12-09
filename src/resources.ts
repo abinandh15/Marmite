@@ -4,7 +4,7 @@ export default {
             grill: new GLTFShape('models/grill.glb'),
             tree: new GLTFShape('models/tree.glb'),
             telephoneBoothYellow: new GLTFShape('models/telephone_booth_yellow.glb'),
-            telephoneBoothRed: new GLTFShape('models/telephone_booth_red.glb'),
+            telephoneBoothBlack: new GLTFShape('models/telephone_booth_black.glb'),
             base: new GLTFShape('models/Downing_updated.glb'),
             loveCamp: new GLTFShape('models/love_camp.glb'),
             hateCamp: new GLTFShape('models/hate_camp.glb'),
@@ -18,7 +18,8 @@ export default {
             banner: new GLTFShape('models/banner.glb'),
             gateBuilding: new GLTFShape('models/gate_building.glb'),
             christmastree:new GLTFShape('models/ChristmasTree .glb'),
-            // people: new GLTFShape('models/people.glb'),
+            lovePeople: new GLTFShape('models/Crowd_Y.gltf'),
+            hatePeople: new GLTFShape('models/Crowd_R.gltf'),
         },
         robots:{
             person1: new GLTFShape('models/robots/NPC1.glb'),
